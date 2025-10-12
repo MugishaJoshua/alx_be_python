@@ -1,6 +1,6 @@
 # book_class.py
 
-class book:
+class Book:
     def __inti__(self, title: str, author:str, year: int):
          """Constructor that initializes a Book instance with title, author, and year."""
          self.title = title
