@@ -16,14 +16,11 @@ class Calculator:
         """Returns the difference between two numbers."""
         return a - b
 
-    @staticmethod
-    def multiply(a, b):
-        """Returns the product of two numbers."""
+    @classmethod
+    def multiply(cls, a, b):
+        """Returns the product of two numbers using a class method."""
         return a * b
 
     @staticmethod
     def divide(a, b):
-        """Returns the quotient of two numbers. Raises ValueError if b is zero."""
-        if b == 0:
-            raise ValueError("Cannot divide by zero.")
-        return a / b
+        """Ret
