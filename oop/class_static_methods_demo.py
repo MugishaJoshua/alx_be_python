@@ -1,30 +1,29 @@
-# polymorphism_demo.py
+# class_static_methods_demo.py
 
-import math
+class Calculator:
+    """A simple calculator class demonstrating class and static methods."""
 
-class Shape:
-    """Base class for all shapes."""
-    def area(self):
-        """Abstract method to be implemented by subclasses."""
-        raise NotImplementedError("Subclasses must implement the area() method")
+    # Class attribute
+    calculation_type = "Arithmetic Operations"
 
+    @staticmethod
+    def add(a, b):
+        """Returns the sum of two numbers."""
+        return a + b
 
-class Rectangle(Shape):
-    """Represents a rectangle shape."""
-    def __init__(self, length: float, width: float):
-        self.length = length
-        self.width = width
+    @staticmethod
+    def subtract(a, b):
+        """Returns the difference between two numbers."""
+        return a - b
 
-    def area(self):
-        """Calculates and returns the area of the rectangle."""
-        return self.length * self.width
+    @staticmethod
+    def multiply(a, b):
+        """Returns the product of two numbers."""
+        return a * b
 
-
-class Circle(Shape):
-    """Represents a circle shape."""
-    def __init__(self, radius: float):
-        self.radius = radius
-
-    def area(self):
-        """Calculates and returns the area of the circle."""
-        return math.pi * (self.radius ** 2)
+    @staticmethod
+    def divide(a, b):
+        """Returns the quotient of two numbers. Raises ValueError if b is zero."""
+        if b == 0:
+            raise ValueError("Cannot divide by zero.")
+        return a / b
