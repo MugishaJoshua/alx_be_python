@@ -1,6 +1,16 @@
-# main.py
+from class_static_methods_demo import Calculator
 
-# Print exact expected output
-print("The sum is: 15")
-print("Calculation type: Arithmetic Operations")
-print("The product is: 50")
+def main():
+    # Using the static method
+    sum_result = Calculator.add(10, 5)
+    print(f"The sum is: {sum_result}")
+
+    # Print the calculation type
+    print(f"Calculation type: {Calculator.calculation_type}")
+
+    # Using the class method
+    product_result = Calculator.multiply(10, 5)
+    print(f"The product is: {product_result}")
+
+if __name__ == "__main__":
+    main()
