@@ -1,7 +1,4 @@
-# class_static_methods_demo.py
-
 class Calculator:
-    # Class attribute
     calculation_type = "Arithmetic Operations"
 
     @staticmethod
