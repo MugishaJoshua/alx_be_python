@@ -1,12 +1,23 @@
-from class_static_methods_demo import Calculator
+# class_static_methods_demo.py
 
-def main():
-    sum_result = Calculator.add(10, 5)
-    product_result = Calculator.multiply(10, 5)
+class Calculator:
+    # Class attribute
+    calculation_type = "Arithmetic Operations"
 
-    print(f"The sum is: {sum_result}")
-    print(f"Calculation type: {Calculator.calculation_type}")
-    print(f"The product is: {product_result}")
+    @staticmethod
+    def add(a, b):
+        return a + b
 
-if __name__ == "__main__":
-    main()
+    @staticmethod
+    def subtract(a, b):
+        return a - b
+
+    @classmethod
+    def multiply(cls, a, b):
+        return a * b
+
+    @staticmethod
+    def divide(a, b):
+        if b == 0:
+            raise ValueError("Cannot divide by zero.")
+        return a / b
